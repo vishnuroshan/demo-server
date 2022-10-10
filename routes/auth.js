@@ -32,7 +32,7 @@ router.get("/api/verify-user/:token", (request, response) => {
   response.status(result.status).json(result);
 });
 
-router.get("/api/list", (request, response) => {
+router.get("/api/collaborators", (request, response) => {
   response.set("Access-Control-Allow-Origin", "http://localhost:4200/");
   const result = authController.listApi(request.query);
   response.status(200).json({ status: 200, ...result });

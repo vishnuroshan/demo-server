@@ -5,7 +5,7 @@ const list = [
     role: "NP",
     state: "NY",
     dateActive: "18/07/2022",
-    status: "completed",
+    status: "Submitted",
   },
   {
     name: "gideon",
@@ -19,14 +19,14 @@ const list = [
     role: "NP",
     state: "NY",
     dateActive: "09/05/2022",
-    status: "completed",
+    status: "Submitted",
   },
   {
     name: "brad",
     role: "NP,LLK,JHK,MNG",
     state: "CA",
     dateActive: "09/09/2022",
-    status: "completed",
+    status: "Submitted",
   },
   {
     name: "max",
@@ -40,7 +40,7 @@ const list = [
     role: "NP",
     state: "NY",
     dateActive: "22/07/2022",
-    status: "completed",
+    status: "Submitted",
   },
   {
     name: "vilma",
@@ -61,14 +61,14 @@ const list = [
     role: "NP",
     state: "NY",
     dateActive: "09/05/2022",
-    status: "completed",
+    status: "Submitted",
   },
   {
     name: "brad",
     role: "NP,LLK,JHK,MNG",
     state: "CA",
     dateActive: "09/09/2022",
-    status: "completed",
+    status: "Submitted",
   },
   {
     name: "max",
@@ -82,7 +82,7 @@ const list = [
     role: "NP",
     state: "NY",
     dateActive: "22/07/2022",
-    status: "completed",
+    status: "Submitted",
   },
   {
     name: "vilma",
@@ -103,14 +103,14 @@ const list = [
     role: "NP",
     state: "NY",
     dateActive: "09/05/2022",
-    status: "completed",
+    status: "Submitted",
   },
   {
     name: "brad",
     role: "NP,LLK,JHK,MNG",
     state: "CA",
     dateActive: "09/09/2022",
-    status: "completed",
+    status: "Submitted",
   },
   {
     name: "max",
@@ -124,7 +124,7 @@ const list = [
     role: "NP",
     state: "NY",
     dateActive: "22/07/2022",
-    status: "completed",
+    status: "Submitted",
   },
   {
     name: "vilma",
@@ -145,14 +145,14 @@ const list = [
     role: "NP",
     state: "NY",
     dateActive: "09/05/2022",
-    status: "completed",
+    status: "Submitted",
   },
   {
     name: "brad",
     role: "NP,LLK,JHK,MNG",
     state: "CA",
     dateActive: "09/09/2022",
-    status: "completed",
+    status: "Submitted",
   },
   {
     name: "max",
@@ -166,7 +166,7 @@ const list = [
     role: "NP",
     state: "NY",
     dateActive: "22/07/2022",
-    status: "completed",
+    status: "Submitted",
   },
   {
     name: "vilma",
@@ -187,14 +187,14 @@ const list = [
     role: "NP",
     state: "NY",
     dateActive: "09/05/2022",
-    status: "completed",
+    status: "Submitted",
   },
   {
     name: "brad",
     role: "NP,LLK,JHK,MNG",
     state: "CA",
     dateActive: "09/09/2022",
-    status: "completed",
+    status: "Submitted",
   },
   {
     name: "max",
@@ -208,7 +208,7 @@ const list = [
     role: "NP",
     state: "NY",
     dateActive: "22/07/2022",
-    status: "completed",
+    status: "Submitted",
   },
   {
     name: "vilma",
@@ -229,14 +229,14 @@ const list = [
     role: "NP",
     state: "NY",
     dateActive: "09/05/2022",
-    status: "completed",
+    status: "Submitted",
   },
   {
     name: "brad",
     role: "NP,LLK,JHK,MNG",
     state: "CA",
     dateActive: "09/09/2022",
-    status: "completed",
+    status: "Submitted",
   },
   {
     name: "max",
@@ -250,7 +250,7 @@ const list = [
     role: "NP",
     state: "NY",
     dateActive: "22/07/2022",
-    status: "completed",
+    status: "Submitted",
   },
   {
     name: "vilma",
@@ -271,14 +271,14 @@ const list = [
     role: "NP",
     state: "NY",
     dateActive: "09/05/2022",
-    status: "completed",
+    status: "Submitted",
   },
   {
     name: "brad",
     role: "NP,LLK,JHK,MNG",
     state: "CA",
     dateActive: "09/09/2022",
-    status: "completed",
+    status: "Submitted",
   },
   {
     name: "max",
@@ -292,7 +292,7 @@ const list = [
     role: "NP",
     state: "NY",
     dateActive: "22/07/2022",
-    status: "completed",
+    status: "Submitted",
   },
   {
     name: "vilma",
@@ -313,14 +313,14 @@ const list = [
     role: "NP",
     state: "NY",
     dateActive: "09/05/2022",
-    status: "completed",
+    status: "Submitted",
   },
   {
     name: "brad",
     role: "NP,LLK,JHK,MNG",
     state: "CA",
     dateActive: "09/09/2022",
-    status: "completed",
+    status: "Submitted",
   },
   {
     name: "max",
@@ -334,7 +334,7 @@ const list = [
     role: "NP",
     state: "NY",
     dateActive: "22/07/2022",
-    status: "completed",
+    status: "Submitted",
   },
   {
     name: "vilma",
@@ -355,14 +355,14 @@ const list = [
     role: "NP",
     state: "NY",
     dateActive: "09/05/2022",
-    status: "completed",
+    status: "Submitted",
   },
   {
     name: "brad",
     role: "NP,LLK,JHK,MNG",
     state: "CA",
     dateActive: "09/09/2022",
-    status: "completed",
+    status: "Submitted",
   },
   {
     name: "max",
@@ -376,7 +376,7 @@ const list = [
     role: "NP",
     state: "NY",
     dateActive: "22/07/2022",
-    status: "completed",
+    status: "Submitted",
   },
   {
     name: "vilma",
@@ -397,14 +397,14 @@ const list = [
     role: "NP",
     state: "NY",
     dateActive: "09/05/2022",
-    status: "completed",
+    status: "Submitted",
   },
   {
     name: "brad",
     role: "NP,LLK,JHK,MNG",
     state: "CA",
     dateActive: "09/09/2022",
-    status: "completed",
+    status: "Submitted",
   },
   {
     name: "max",
@@ -418,7 +418,7 @@ const list = [
     role: "NP",
     state: "NY",
     dateActive: "22/07/2022",
-    status: "completed",
+    status: "Submitted",
   },
   {
     name: "vilma",
@@ -459,7 +459,11 @@ const documents = [
 ];
 authController.forgotPassword = ({ email }) => {
   if (email === "frg200@gmail.com")
-    return { status: 200, message: "mail sent to email. please check" };
+    return {
+      link: "http://localhost:4200/account/reset-password/200",
+      status: 200,
+      message: "mail sent to email. please check",
+    };
   if (email === "frg404@gmail.com")
     return { status: 404, message: "email not found" };
   if (email === "frg500@gmail.com")
@@ -509,20 +513,24 @@ authController.verifyUser = ({ token }) => {
 authController.listApi = ({ page = 1, limit = 10, search, filters }) => {
   if (page === 0) page = 1;
   return {
+    message: "success",
     limit: Number(limit),
     totalRecords: list.length,
     page: Number(page),
     list: list.slice((page - 1) * limit, page * limit),
+    // list: [],
   };
 };
 
 authController.documentApi = ({ page = 1, limit = 10, search, filters }) => {
   if (page === 0) page = 1;
   return {
+    message: "success",
     limit: Number(limit),
     totalRecords: documents.length,
     page: Number(page),
     list: documents.slice((page - 1) * limit, page * limit),
+    // list: [],
   };
 };
 
