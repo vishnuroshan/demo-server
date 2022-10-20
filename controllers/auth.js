@@ -1,4 +1,5 @@
 const authController = {};
+const shortId = require('shortid');
 const list = [
   {
     collaborator_name: "vishnuroshan",
@@ -460,24 +461,28 @@ const documents = [
 
 const users = [
   {
+    id: shortId(),
     first_name: 'Vishnu',
     last_name: 'Roshan',
     user_type: 'APC',
     email: 'vish@dd.com',
   },
   {
+    id: shortId(),
     first_name: 'damian',
     last_name: 'Wayne',
     user_type: 'APC',
     email: 'redhood@dd.com',
   },
   {
+    id: shortId(),
     first_name: 'Bruce',
     last_name: 'Wayne',
     user_type: 'APC',
     email: 'bat@dd.com',
   },
   {
+    id: shortId(),
     first_name: 'Clark',
     last_name: 'kent',
     user_type: 'APC',
