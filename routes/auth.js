@@ -26,26 +26,43 @@ router.post("/api/reset-password/:token", (request, response) => {
   response.status(result.status).json(result);
 });
 
-router.get("/api/verify-user/:token", (request, response) => {
+router.post("/api/verify-user/:uid/:token", (request, response) => {
   response.set("Access-Control-Allow-Origin", "http://localhost:4200/");
   const result = authController.verifyUser(request.params);
   response.status(result.status).json(result);
 });
 
-router.get("/api/collaborators", (request, response) => {
+router.get("/api/collaborators-search", (request, response) => {
   response.set("Access-Control-Allow-Origin", "http://localhost:4200/");
   const result = authController.listApi(request.query);
-  response.status(200).json({ status: 200, ...result });
+  response.status(200).json({ ...result });
 });
-router.get("/api/documents", (request, response) => {
+router.get("/api/documents-search", (request, response) => {
   response.set("Access-Control-Allow-Origin", "http://localhost:4200/");
   const result = authController.documentApi(request.query);
-  response.status(200).json({ status: 200, ...result });
+  response.status(200).json({ ...result });
+});
+
+router.get('/api/users-search', (request, response) => {
+  response.set('Access-Control-Allow-Origin', 'http://localhost:4200/');
+  const result = authController.usersApi(request.query);
+  response.status(200).json({ ...result });
 });
 
 router.get("/api/get-default-filter-values", (request, response) => {
   response.set("Access-Control-Allow-Origin", "http://localhost:4200/");
   const result = authController.getAllFilters();
-  response.status(200).json({ status: 200, ...result });
+  response.status(200).json({...result });
+});
+
+router.get("/api/user", (request, response) => {
+  response.set("Access-Control-Allow-Origin", "http://localhost:4200/");
+  const result = authController.getUser(request.query);
+  response.status(200).json(result);
+});
+
+router.post('/api/zivianusers', (request, response) => {
+  response.set('Access-Control-Allow-Origin', 'http://localhost:4200/');
+  response.status(200).json({ message: 'User created'});
 });
 module.exports = router;
