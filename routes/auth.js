@@ -43,12 +43,6 @@ router.get("/api/documents-search", (request, response) => {
   response.status(200).json({ ...result });
 });
 
-router.get('/api/users-search', (request, response) => {
-  response.set('Access-Control-Allow-Origin', 'http://localhost:4200/');
-  const result = authController.usersApi(request.query);
-  response.status(200).json({ ...result });
-});
-
 router.get("/api/get-default-filter-values", (request, response) => {
   response.set("Access-Control-Allow-Origin", "http://localhost:4200/");
   const result = authController.getAllFilters();
@@ -61,8 +55,16 @@ router.get("/api/user", (request, response) => {
   response.status(200).json(result);
 });
 
+
+// CRUD for admin/super admin users
 router.post('/api/zivianusers', (request, response) => {
   response.set('Access-Control-Allow-Origin', 'http://localhost:4200/');
   response.status(200).json({ message: 'User created'});
+});
+
+router.get('/api/zivianusers', (request, response) => {
+  response.set('Access-Control-Allow-Origin', 'http://localhost:4200/');
+  const result = authController.usersApi(request.query);
+  response.status(200).json({ ...result });
 });
 module.exports = router;
