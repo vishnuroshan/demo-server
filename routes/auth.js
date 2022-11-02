@@ -85,5 +85,17 @@ router.put('/api/zivianusers/:id', (request, response) => {
   response.status(200).json({ message: 'User updated' });
 });
 
+router.get("/api/mddousers", (request, response) => {
+  response.set("Access-Control-Allow-Origin", "http://localhost:4200/");
+  const result = authController.getMDDOs(request.query);
+  response.status(200).json({ ...result });
+});
+
+router.get("/api/apcusers", (request, response) => {
+  response.set("Access-Control-Allow-Origin", "http://localhost:4200/");
+  const result = authController.getAPCs(request.query);
+  response.status(200).json({ ...result });
+});
+
 
 module.exports = router;
