@@ -97,5 +97,11 @@ router.get("/api/apcusers", (request, response) => {
   response.status(200).json({ ...result });
 });
 
+router.get('/api/providers-filter-values', (request, response) => {
+  response.set('Access-Control-Allow-Origin', 'http://localhost:4200/');
+  const result = authController.getProviderFilters();
+  response.status(200).json({ ...result });
+});
+
 
 module.exports = router;
