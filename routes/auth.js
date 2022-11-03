@@ -9,13 +9,13 @@ router.get("/api/ping", (request, response) => {
 router.post("/api/users/forgot-password", (request, response) => {
   const result = authController.forgotPassword(request.body);
   response.set("Access-Control-Allow-Origin", "http://localhost:4200/");
-  response.status(result.status).json(result);
+  response.status(200).json(result);
 });
 
 router.post("/api/login", (request, response) => {
   const result = authController.login(request.body);
   response.set("Access-Control-Allow-Origin", "http://localhost:4200/");
-  response.status(result.status).json(result);
+  response.status(200).json(result);
 });
 router.post("/api/users/reset-password/:token", (request, response) => {
   response.set("Access-Control-Allow-Origin", "http://localhost:4200/");
@@ -23,13 +23,13 @@ router.post("/api/users/reset-password/:token", (request, response) => {
     ...request.body,
     ...request.params,
   });
-  response.status(result.status).json(result);
+  response.status(200).json(result);
 });
 
 router.post("/api/users/verify-token/:uid/:token", (request, response) => {
   response.set("Access-Control-Allow-Origin", "http://localhost:4200/");
   const result = authController.verifyUser(request.params);
-  response.status(result.status).json(result);
+  response.status(200).json(result);
 });
 
 router.get('/api/collaborations/search', (request, response) => {
