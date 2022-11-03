@@ -92,21 +92,23 @@ authController.getProviderFilters = () => {
 }
 
 authController.getAPCs = ({ page = 1, limit = 10, search, filters }) => {
-  return {
-    limit: Number(limit),
-    totalRecords: apcUsers.length,
-    page: Number(page),
-    list: apcUsers.slice((page - 1) * limit, page * limit),
-  }
+  // return {
+  //   limit: Number(limit),
+  //   totalRecords: apcUsers.length,
+  //   page: Number(page),
+  //   list: apcUsers.slice((page - 1) * limit, page * limit),
+  // }
+  return apcUsers;
 }
 
 authController.getMDDOs = ({ page = 1, limit = 10, search, filters }) => {
-  return {
-    limit: Number(limit),
-    totalRecords: md_do_users.length,
-    page: Number(page),
-    list: md_do_users.slice((page - 1) * limit, page * limit),
-  }
+  // return {
+  //   limit: Number(limit),
+  //   totalRecords: md_do_users.length,
+  //   page: Number(page),
+  //   list: md_do_users.slice((page - 1) * limit, page * limit),
+  // }
+  return md_do_users;
 }
 
 authController.getUser = ({ id }) => {
