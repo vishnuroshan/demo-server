@@ -48,67 +48,57 @@ authController.verifyUser = ({ token }) => {
   if (token === '500') return { status: 401, message: 'something went wrong!' };
 };
 
-authController.listApi = ({ page = 1, limit = 10, search, filters }) => {
+authController.listApi = ({ page = 1, limit = 20 }) => {
   if (page === 0) page = 1;
   return {
-    message: 'success',
-    limit: Number(limit),
-    totalRecords: collaborations.length,
-    page: Number(page),
-    list: collaborations.slice((page - 1) * limit, page * limit),
+    count: collaborations.length,
+    next: 'some-string',
+    previous: 'some-string',
+    results: collaborations.slice((page - 1) * limit, page * limit),
   };
 };
 
-authController.documentApi = ({ page = 1, limit = 10, search, filters }) => {
+authController.documentApi = ({ page = 1, limit = 20}) => {
   if (page === 0) page = 1;
   return {
-    message: 'success',
-    limit: Number(limit),
-    totalRecords: myDocuments.length,
-    page: Number(page),
-    list: myDocuments.slice((page - 1) * limit, page * limit),
+    count: myDocuments.length,
+    next: 'some-string',
+    previous: 'some-string',
+    results: myDocuments.slice((page - 1) * limit, page * limit),
   };
 };
 
-authController.usersApi = ({ page = 1, limit = 10, search, filters }) => {
+authController.usersApi = ({ page = 1, limit = 20}) => {
   if (page === 0) page = 1;
   return {
-    message: 'success',
-    limit: Number(limit),
-    totalRecords: users.length,
-    page: Number(page),
-    list: users.slice((page - 1) * limit, page * limit),
+    count: users.length,
+    next: 'some-string',
+    previous: 'some-string',
+    results: users.slice((page - 1) * limit, page * limit),
   };
 };
 
-authController.getAllFilters = () => {
+authController.getAllFilters = () => filters;
+authController.getProviderFilters = () => providerFilters;
 
-  return filters;
-};
-
-
-authController.getProviderFilters = () => {
-  return providerFilters;
+authController.getAPCs = ({ page = 1, limit = 20 }) => {
+  if (page === 0) page = 1;
+  return {
+    count: apcUsers.length,
+    next: 'some-string',
+    previous: 'some-string',
+    results: apcUsers.slice((page - 1) * limit, page * limit),
+  }
 }
 
-authController.getAPCs = ({ page = 1, limit = 10, search, filters }) => {
-  // return {
-  //   limit: Number(limit),
-  //   totalRecords: apcUsers.length,
-  //   page: Number(page),
-  //   list: apcUsers.slice((page - 1) * limit, page * limit),
-  // }
-  return apcUsers;
-}
-
-authController.getMDDOs = ({ page = 1, limit = 10, search, filters }) => {
-  // return {
-  //   limit: Number(limit),
-  //   totalRecords: md_do_users.length,
-  //   page: Number(page),
-  //   list: md_do_users.slice((page - 1) * limit, page * limit),
-  // }
-  return md_do_users;
+authController.getMDDOs = ({ page = 1, limit = 20 }) => {
+  if (page === 0) page = 1;
+  return {
+    count: md_do_users.length,
+    next: 'some-string',
+    previous: 'some-string',
+    results: md_do_users.slice((page - 1) * limit, page * limit),
+  }
 }
 
 authController.getUser = ({ id }) => {
