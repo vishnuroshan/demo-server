@@ -1,7 +1,7 @@
 const myDocuments = [
   {
     doc_name: 'vishnu_document',
-    collaborasssstor_name: 'vishnu',
+    collaborator_name: 'vishnu',
     state_name: 'NY',
     doc_size: '500kb',
     active_date: '2022/05/12',
@@ -9,7 +9,7 @@ const myDocuments = [
   },
   {
     doc_name: 'roshan_document',
-    collaborasssstor_name: 'roshan',
+    collaborator_name: 'roshan',
     state_name: 'NY',
     doc_size: '80kb',
     active_date: '2022/05/12',
@@ -18,7 +18,7 @@ const myDocuments = [
   },
   {
     doc_name: 'rohan_document',
-    collaborasssstor_name: 'rohan',
+    collaborator_name: 'rohan',
     state_name: 'NY',
     doc_size: '100kb',
     active_date: '2022/05/12',

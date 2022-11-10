@@ -50,12 +50,7 @@ authController.verifyUser = ({ token }) => {
 
 authController.listApi = ({ page = 1, limit = 20 }) => {
   if (page === 0) page = 1;
-  return {
-    count: collaborations.length,
-    next: 'some-string',
-    previous: 'some-string',
-    results: collaborations.slice((page - 1) * limit, page * limit),
-  };
+  return collaborations;
 };
 
 authController.documentApi = ({ page = 1, limit = 20}) => {
