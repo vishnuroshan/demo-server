@@ -13,7 +13,7 @@ let users = require('./data/users');
 authController.forgotPassword = ({ email }) => {
   if (email === 'frg200@gmail.com')
     return {
-      link: 'http://localhost:4200/account/reset-password/200',
+      link: 'http://localhost:4200/account/reset-password/200/200',
       status: 200,
       message: 'mail sent to email. please check',
     };
@@ -43,6 +43,7 @@ authController.resetPassword = ({ token, password }) => {
 };
 
 authController.verifyUser = ({ token }) => {
+  console.log(token)
   if (token === '200') return { status: 200, message: 'successful' };
   if (token === '404') return { status: 404, message: 'unauthorized' };
   if (token === '500') return { status: 401, message: 'something went wrong!' };

@@ -26,7 +26,7 @@ router.post("/api/users/reset-password/:token", (request, response) => {
   response.status(200).json(result);
 });
 
-router.post("/api/users/verify-token/:uid/:token", (request, response) => {
+router.post("/api/users/validate-token/:uid/:token", (request, response) => {
   response.set("Access-Control-Allow-Origin", "http://localhost:4200/");
   const result = authController.verifyUser(request.params);
   response.status(200).json(result);
@@ -62,7 +62,7 @@ router.post('/api/zivianusers', (request, response) => {
   response.status(200).json({ message: 'User created'});
 });
 
-router.get('/api/zivianusers', (request, response) => {
+router.get('/api/zivianuser-search', (request, response) => {
   response.set('Access-Control-Allow-Origin', 'http://localhost:4200/');
   const result = authController.usersApi(request.query);
   response.status(200).json({ ...result });
