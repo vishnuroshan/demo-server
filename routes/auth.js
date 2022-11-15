@@ -546,4 +546,92 @@ router.get("/api/alerts", (request, response) => {
   });
 });
 
+router.get('/api/providerDetail/:id', (request, response) => {
+  console.log('request')
+  response.set("Access-Control-Allow-Origin", "http://localhost:4200/");
+  console.log('request')
+  console.log(request)
+  console.log('request.params')
+  console.log(request.params)
+  response.status(200).json({
+    provider: [
+      {
+        id: 24,
+        npi: "1982947610",
+        created_at: "2022-10-21T09:15:02.528791Z",
+        updated_at: "2022-11-02T07:54:49.246818Z",
+        zivian_user: 24,
+        city: 16,
+        country: 1,
+        username: "danielle.dondiego@gmail.com",
+        email: "danielle.dondiego@gmail.com",
+        mobile: "",
+        user_type: "MD_OR_DO",
+        first_name: "",
+        last_name: "",
+        user_name: "Roshan",
+        provider_type: "Doctor of Osteopathy",
+        credentialing_status: "Data Collection",
+        state: "GA",
+        license_states: [
+          [
+            "NY",
+            "KS",
+            "MO",
+            "DC",
+            "UT",
+            "VT",
+            "GA",
+            "NM",
+            "WY",
+            "NC",
+            "AZ",
+            "OK",
+            "TN",
+            "WA",
+            "MI",
+            "MA",
+            "ND",
+            "DE",
+            "AR",
+            "HI",
+            "IN",
+            "NJ",
+            "TX",
+            "MD",
+            "OR",
+            "CT",
+            "ID",
+            "MS",
+            "KY",
+            "RI",
+            "IA",
+            "NE",
+            "PA",
+            "SD",
+            "CO",
+            "NV",
+            "CA",
+            "IL",
+            "OH",
+            "AL",
+            "SC",
+            "LA",
+            "MN",
+            "FL",
+            "MT",
+            "VA",
+            "AK",
+            "WV",
+            "WI",
+            "ME",
+            "NH"
+          ]
+        ]
+      }
+    ],
+    mgs:'successfully loaded the provider'
+  });
+});
+
 module.exports = router;
