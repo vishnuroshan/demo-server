@@ -45,7 +45,8 @@ authController.resetPassword = ({ token, password }) => {
 authController.verifyUser = ({ token }) => {
   console.log(token)
   if (token === '200') return { status: 200, message: 'successful' };
-  if (token === '404') return { status: 404, message: 'unauthorized' };
+  if (token === '401') return { status: 404, message: 'unauthorized' };
+  if (token === '400') return { status: 400, message: 'unauthorized' };
   if (token === '500') return { status: 401, message: 'something went wrong!' };
 };
 
