@@ -17,8 +17,12 @@ authController.forgotPassword = ({ email }) => {
       status: 200,
       message: 'mail sent to email. please check',
     };
-  if (email === 'frg404@gmail.com')
-    return { status: 404, message: 'email not found' };
+  if (email === 'frg400@gmail.com')
+    return {
+      link: 'http://localhost:4200/account/reset-password/400/400',
+      status: 200,
+      message: 'mail sent to email. please check',
+    };
   if (email === 'frg500@gmail.com')
     return { status: 500, message: 'something went wrong' };
 };
