@@ -29,7 +29,7 @@ router.post("/api/users/reset-password/:token", (request, response) => {
 router.post("/api/users/validate-token/:uid/:token", (request, response) => {
   response.set("Access-Control-Allow-Origin", "http://localhost:4200/");
   const result = authController.verifyUser(request.params);
-  response.status(200).json(result);
+  response.status(result.status).json(result);
 });
 
 router.get('/api/collaborations-search', (request, response) => {
