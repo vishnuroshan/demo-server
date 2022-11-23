@@ -8,6 +8,7 @@ const myDocuments = require('./data/my_documents');
 const providerDetails = require('./data/provider_details');
 const filters = require('./data/filters');
 const login_response = require('./data/login_response');
+const org_list = require('./data/org_list');
 let users = require('./data/users');
 
 authController.forgotPassword = ({ email }) => {
@@ -102,8 +103,18 @@ authController.getMDDOs = ({ page = 1, limit = 20 }) => {
   }
 }
 
+authController.orgList = () => {
+  return org_list;
+}
+
 authController.getUser = ({ id }) => {
   return providerDetails;
+};
+
+authController.getOrgById = ({id}) => {
+  const result = org_list.results.find(e=>e.id===id);
+  if(!result) return org_list.results[0];
+  return result;
 };
 
 authController.createUser = (user) => {
@@ -119,5 +130,27 @@ authController.updateUser = (user) => {
   users = users.filter((e) => e.id !== user.id);
   users.push({ id: user.id, ...user });
 };
+
+authController.makeAddress= ()=> {
+  const addressObj = {
+        "id": 23,
+        "block_no": "",
+        "apartment_or_building": "",
+        "address_line_1": "5419 Wheeler Ridge Rd",
+        "address_line_2": 'Medical college road',
+        "city": "5419 Wheeler Ridge Rd",
+        "zip_code": "30011",
+        "address_type": "Home",
+        "created_at": "2022-11-01T15:33:56.223535Z",
+        "updated_at": "2022-11-01T15:33:56.223545Z",
+        "zivian_user": 20,
+        "apc_user": null,
+        "md_do_user": 4,
+        "state": 6,
+        "country": 1
+      }
+
+      return `${addressObj.address_line_1},\n${addressObj.address_line_2},\n${addressObj.city} - ${addressObj.zip_code}`;
+}
 
 module.exports = authController;

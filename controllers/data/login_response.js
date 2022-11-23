@@ -17,6 +17,7 @@ const l = {
     user:{id:1,
     username:"testuser@google.com",
     email:"testuser@google.com",
+    // user_type:"ZIVIAN_ADMIN",
     user_type:"APC",
     user_name:"",
     status:1,

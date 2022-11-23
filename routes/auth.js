@@ -3,7 +3,8 @@ const authController = require("../controllers/auth");
 
 router.get("/api/ping", (request, response) => {
   response.set("Access-Control-Allow-Origin", "http://localhost:4200/");
-  response.status(200).json({ message: "pong" });
+  const result = authController.makeAddress()
+  response.status(200).json({result});
 });
 
 router.post("/api/users/forgot-password", (request, response) => {
@@ -98,9 +99,28 @@ router.get("/api/apc-search", (request, response) => {
   response.status(200).json(result);
 });
 
-router.get('/api/providers-filter-values', (request, response) => {
+router.get("/api/organizations-search", (request, response) => {
+  response.set("Access-Control-Allow-Origin", "http://localhost:4200/");
+  const result = authController.orgList(request.query);
+  
+  response.status(200).json(result);
+});
+
+router.get('/api/md-do-filter-values', (request, response) => {
   response.set('Access-Control-Allow-Origin', 'http://localhost:4200/');
   const result = authController.getProviderFilters();
+  response.status(200).json(result);
+});
+
+router.get('/api/apc-filter-values', (request, response) => {
+  response.set('Access-Control-Allow-Origin', 'http://localhost:4200/');
+  const result = authController.getProviderFilters();
+  response.status(200).json(result);
+});
+
+router.get('/api/organizations/:id', (request, response) => {
+  response.set('Access-Control-Allow-Origin', 'http://localhost:4200/');
+  const result = authController.getOrgById(request.params);
   response.status(200).json(result);
 });
 
@@ -225,7 +245,6 @@ router.get("/api/cities", (request, response) => {
 });
 router.get("/api/countries/:id", (request, response) => {
   response.set("Access-Control-Allow-Origin", "http://localhost:4200/");
-  console.log('request.params')
   console.log(request.params)
   // const result = authController.verifyUser(request.params);
   response.status(200).json({
